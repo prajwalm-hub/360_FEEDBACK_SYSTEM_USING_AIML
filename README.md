@@ -32,6 +32,7 @@ A production-ready, AI-powered multilingual news intelligence platform that coll
   - 50+ Government Schemes
   - Cabinet Ministers & Officials
 - **Real-time Processing** - Automatic enrichment of all incoming articles
+- **PIB Alert System** - Automated email alerts to PIB officers when negative news is detected about government schemes or policies
 - **RAG Assistant** - Intelligent Q&A powered by Retrieval-Augmented Generation:
   - Natural language queries over multilingual news archive
   - FAISS vector search with semantic understanding
@@ -68,7 +69,21 @@ A production-ready, AI-powered multilingual news intelligence platform that coll
 - **Category Analysis** - Topic-based filtering
 - **Source Tracking** - Media outlet statistics
 
-### 🔄 Real-time Features
+### � PIB Alert System
+
+**Automated Alerts for Negative News Detection**
+
+- **Real-time Monitoring** - Automatically detects negative sentiment in government-related news
+- **Email Notifications** - Instant alerts sent to PIB officers when negative news is detected
+- **Smart Filtering** - Tracks scheme-specific negative coverage with confidence scores
+- **Alert Dashboard** - Dedicated interface for PIB officers to review and manage alerts
+- **Multilingual Detection** - Works across all 10+ Indian languages
+- **Deduplication** - Prevents duplicate alerts for the same article
+- **Review System** - Officers can mark alerts as reviewed with notes
+- **Customizable Thresholds** - Configure sentiment score triggers for alerts
+- **Scheme Tracking** - Alerts include government schemes mentioned in negative coverage
+
+### �🔄 Real-time Features
 
 - **Auto-refresh UI** - Frontend polls every 2 minutes
 - **WebSocket Support** - Push notifications for new articles
@@ -259,6 +274,17 @@ npm run dev
   - **Query:** `?date=2025-12-31&ministry=Health`
   - **Returns:** Auto-generated press brief with key highlights
 
+### PIB Alerts
+- `GET /api/alerts` - Get all PIB alerts (negative news notifications)
+  - **Query:** `?reviewed=false&days=7`
+  - **Returns:** List of unreviewed alerts for PIB officers
+- `GET /api/alerts/{alert_id}` - Get specific alert details
+- `POST /api/alerts/{alert_id}/review` - Mark alert as reviewed
+  - **Body:** `{"notes": "Issue addressed", "action_taken": "Press release issued"}`
+- `GET /api/alerts/stats` - Alert statistics
+  - **Returns:** Total alerts, unreviewed count, sentiment breakdown
+- `DELETE /api/alerts/{alert_id}` - Dismiss alert
+
 ### Real-time
 - `WS /api/ws/updates` - WebSocket live updates
 
@@ -321,6 +347,23 @@ npm run dev
    - Get trend predictions
    - Generate press briefs
 
+### PIB Alerts (For Officers)
+1. Access **PIB Alerts** dashboard
+2. View real-time alerts for negative news coverage
+3. Review alerts with:
+   - Article title, summary, and sentiment score
+   - Government schemes mentioned
+   - Language and source information
+   - Confidence level indicators
+4. Take action:
+   - Mark alerts as reviewed
+   - Add notes on actions taken
+   - Dismiss false positives
+5. Configure alert preferences:
+   - Set sentiment threshold (-0.5 to -1.0)
+   - Choose notification channels (email/dashboard)
+   - Filter by ministry or scheme
+
 ---
 
 ## ⚙️ Configuration
@@ -346,6 +389,15 @@ RAG_EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-mpnet-base-v2
 RAG_CACHE_DIR=./vector_cache
 RAG_CHUNK_SIZE=800
 RAG_CHUNK_OVERLAP=150
+
+# PIB Alert System
+SMTP_ENABLED=true  # Enable email alerts
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+PIB_ALERT_EMAIL=pib.officer@gov.in  # Recipient email for negative news alerts
+ALERT_SENTIMENT_THRESHOLD=-0.5  # Trigger alerts for sentiment below this (-1.0 to 1.0)
 
 # Collection
 COLLECT_INTERVAL_MIN=15
