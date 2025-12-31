@@ -32,6 +32,12 @@ A production-ready, AI-powered multilingual news intelligence platform that coll
   - 50+ Government Schemes
   - Cabinet Ministers & Officials
 - **Real-time Processing** - Automatic enrichment of all incoming articles
+- **RAG Assistant** - Intelligent Q&A powered by Retrieval-Augmented Generation:
+  - Natural language queries over multilingual news archive
+  - FAISS vector search with semantic understanding
+  - Confidence-scored answers with source citations
+  - Specialized PIB officer insights and trend predictions
+  - Support for both local (HuggingFace) and cloud (OpenAI GPT-4) LLMs
 
 ### 📰 News Collection
 
@@ -73,6 +79,30 @@ A production-ready, AI-powered multilingual news intelligence platform that coll
 - **PostgreSQL** (default) - Full-text search, advanced indexing
 - **MongoDB** (optional) - Document-based storage
 - Easy toggle via environment variable
+
+### 🤖 RAG Assistant (Retrieval-Augmented Generation)
+
+**Intelligent Q&A over Multilingual Government News**
+
+- **Vector Search** - FAISS-based semantic search over 5000+ articles
+- **Multilingual Embeddings** - `paraphrase-multilingual-mpnet-base-v2` supports all Indian languages
+- **Smart Retrieval** - Confidence-aware filtering for high-quality answers
+- **Context-Aware** - 800-token chunks with 150-token overlap for better precision
+- **Dual LLM Support**:
+  - **HuggingFace** - Local models for privacy
+  - **OpenAI GPT-4** - Optional for advanced reasoning
+- **Specialized Features**:
+  - PIB Insights - Ministry-wise analysis and scheme tracking
+  - Trend Prediction - Forecast future news patterns
+  - Policy Timeline - Track government initiative evolution
+  - Geographic Intelligence - State-wise news distribution
+  - Press Brief Generation - Auto-generate summaries for PIB officers
+- **Caching** - Vector stores cached for fast subsequent queries
+- **API Endpoints**:
+  - `/assistant/query` - Standard Q&A
+  - `/assistant/pib-insights` - Officer-specific analysis
+  - `/assistant/scheme-summary` - Government scheme coverage
+  - `/assistant/trends` - Predict emerging topics
 
 ---
 
@@ -212,6 +242,23 @@ npm run dev
 - `GET /api/analytics/languages` - Language distribution with script info
 - `GET /api/analytics/scripts` - Script distribution (Devanagari, Tamil, etc.)
 
+### RAG Assistant
+- `POST /api/assistant/query` - Ask questions about news
+  - **Body:** `{"question": "What are recent health schemes?", "k": 5, "language": "en"}`
+  - **Returns:** AI-generated answer with source citations
+- `POST /api/assistant/pib-insights` - PIB officer-specific insights
+  - **Body:** `{"question": "Ministry-wise scheme coverage", "k": 5}`
+  - **Returns:** Confidence-scored analysis with ministry breakdown
+- `GET /api/assistant/scheme-summary` - Government scheme overview
+  - **Query:** `?days=30`
+  - **Returns:** Scheme mentions, confidence, related ministries
+- `POST /api/assistant/trends` - Predict emerging topics
+  - **Body:** `{"topic": "agriculture", "days": 30}`
+  - **Returns:** Trend forecast with confidence intervals
+- `GET /api/assistant/press-brief` - Generate press briefing
+  - **Query:** `?date=2025-12-31&ministry=Health`
+  - **Returns:** Auto-generated press brief with key highlights
+
 ### Real-time
 - `WS /api/ws/updates` - WebSocket live updates
 
@@ -256,6 +303,24 @@ npm run dev
    - Source-specific filtering
 3. Export results as CSV
 
+### RAG Assistant
+1. Go to **Assistant** page
+2. Ask questions in natural language:
+   - "What are the recent health schemes announced?"
+   - "Summarize PM's announcements this week"
+   - "Which states have the most agriculture news?"
+   - "What's the sentiment around Ayushman Bharat?"
+3. Get AI-powered answers with:
+   - Source citations from relevant articles
+   - Confidence scores
+   - Related ministries and schemes
+   - Sentiment analysis
+4. Use advanced queries:
+   - Filter by date range, region, or ministry
+   - Request PIB officer insights
+   - Get trend predictions
+   - Generate press briefs
+
 ---
 
 ## ⚙️ Configuration
@@ -274,6 +339,13 @@ HUGGINGFACE_TOKEN=your_token_here  # Required for IndicTrans2
 SENTIMENT_MODEL=cardiffnlp/twitter-xlm-roberta-base-sentiment
 ZERO_SHOT_MODEL=joeddav/xlm-roberta-large-xnli
 NER_MODEL=xlm-roberta-large-finetuned-conll03-english
+
+# RAG Assistant (Optional)
+OPENAI_API_KEY=your_openai_key_here  # Optional: For GPT-4 powered RAG
+RAG_EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+RAG_CACHE_DIR=./vector_cache
+RAG_CHUNK_SIZE=800
+RAG_CHUNK_OVERLAP=150
 
 # Collection
 COLLECT_INTERVAL_MIN=15
@@ -328,8 +400,10 @@ feeds:
 | Topics | `xlm-roberta-large-xnli` | ~900MB |
 | NER | `xlm-roberta-large-finetuned-conll03` | ~900MB |
 | spaCy NER | `en_core_web_sm` | ~40MB |
+| **RAG Embeddings** | `paraphrase-multilingual-mpnet-base-v2` | ~420MB |
+| **RAG LLM** (Optional) | `OpenAI GPT-4` or HuggingFace local | Cloud/Variable |
 
-**Total:** ~2.4GB (cached after first download)
+**Total:** ~2.8GB (cached after first download, +420MB for RAG)
 
 ---
 
