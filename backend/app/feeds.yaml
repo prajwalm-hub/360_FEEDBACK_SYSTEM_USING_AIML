@@ -1,0 +1,583 @@
+feeds:
+- name: PIB India (English)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1
+  region: India
+  language: en
+  script: Latin
+  description: Official PIB press releases - English
+- name: PIB भारत (हिन्दी)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=2
+  region: India
+  language: hi
+  script: Devanagari
+  description: Official PIB press releases - Hindi
+- name: PIB Karnataka (ಕನ್ನಡ)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=7
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: Official PIB press releases - Kannada
+- name: PIB Tamil Nadu (தமிழ்)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=10
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: Official PIB press releases - Tamil
+- name: PIB Andhra Pradesh (తెలుగు)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=11
+  region: Andhra Pradesh
+  language: te
+  script: Telugu
+  description: Official PIB press releases - Telugu
+- name: PIB West Bengal (বাংলা)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=3
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: Official PIB press releases - Bengali
+- name: PIB Kerala (മലയാളം)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=9
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: Official PIB press releases - Malayalam
+- name: PIB Maharashtra (मराठी)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=8
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: Official PIB press releases - Marathi
+- name: PIB Gujarat (ગુજરાતી)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=5
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: Official PIB press releases - Gujarati
+- name: PIB Punjab (ਪੰਜਾਬੀ)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=12
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: Official PIB press releases - Punjabi
+- name: PIB Odisha (ଓଡ଼ିଆ)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=13
+  region: Odisha
+  language: or
+  script: Odia
+  description: Official PIB press releases - Odia
+- name: PIB India (اردو)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=4
+  region: India
+  language: ur
+  script: Arabic
+  description: Official PIB press releases - Urdu
+- name: PIB Assam (অসমীয়া)
+  url: https://pib.gov.in/RssMain.aspx?ModId=6&Lang=14
+  region: Assam
+  language: as
+  script: Bengali
+  description: Official PIB press releases - Assamese
+- name: PIB Features
+  url: https://pib.gov.in/RssMain.aspx?ModId=7&Lang=1
+  region: India
+  language: en
+  script: Latin
+  description: PIB feature articles and in-depth coverage
+- name: The Hindu - National News
+  url: https://www.thehindu.com/news/national/feeder/default.rss
+  region: India
+  language: en
+  script: Latin
+  description: National politics and central government coverage
+- name: Indian Express - India Section
+  url: https://indianexpress.com/section/india/feed/
+  region: India
+  language: en
+  script: Latin
+  description: Parliament, policies, central government news
+- name: Times of India - India News
+  url: https://timesofindia.indiatimes.com/rssfeeds/296589292.cms
+  region: India
+  language: en
+  script: Latin
+  description: Central government and national politics
+- name: NDTV India News
+  url: https://feeds.feedburner.com/ndtv/Ltyd
+  region: India
+  language: en
+  script: Latin
+  description: National news and government updates
+- name: Hindustan Times - India News
+  url: https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml
+  region: India
+  language: en
+  script: Latin
+  description: Parliamentary proceedings and cabinet decisions
+- name: Business Standard - Politics
+  url: https://www.business-standard.com/rss/politics-102.rss
+  region: India
+  language: en
+  script: Latin
+  description: Central government policy and governance
+- name: Amar Ujala - राष्ट्रीय
+  url: https://www.amarujala.com/rss/india-news.xml
+  region: India
+  language: hi
+  script: Devanagari
+  description: India news focusing on central government
+- name: Dainik Bhaskar - राष्ट्रीय
+  url: https://www.bhaskar.com/rss-feed/1061/
+  region: India
+  language: hi
+  script: Devanagari
+  description: Central government news and policies
+- name: Aaj Tak - भारत
+  url: https://www.aajtak.in/rss/india.xml
+  region: India
+  language: hi
+  script: Devanagari
+  description: National politics and GoI schemes
+- name: NDTV India (Hindi)
+  url: https://feeds.feedburner.com/ndtvkhabar-ndtvindia
+  region: India
+  language: hi
+  script: Devanagari
+  description: National news and parliament coverage
+- name: Jagran - राष्ट्रीय
+  url: https://www.jagran.com/rss/national.xml
+  region: India
+  language: hi
+  script: Devanagari
+  description: Central ministries and government updates
+- name: Google News Kannada - Government
+  url: https://news.google.com/rss/search?q=ಸರ್ಕಾರ+OR+ಯೋಜನೆ+OR+ಕೇಂದ್ರ+OR+ಮೋದಿ+when:1d&hl=kn&gl=IN&ceid=IN:kn
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: Government schemes and policies - pre-filtered by Google (20-30 articles/day)
+- name: Google News Kannada - PM Modi
+  url: https://news.google.com/rss/search?q=ಮೋದಿ+OR+ಪ್ರಧಾನಿ+OR+ಕೇಂದ್ರ+ಯೋಜನೆ+when:1d&hl=kn&gl=IN&ceid=IN:kn
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: PM Modi and central schemes
+- name: Asianet Kannada - India
+  url: https://kannada.asianetnews.com/india/rss
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: National news and central government
+- name: Prajavani - National
+  url: https://www.prajavani.net/national/feed
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: Parliament, PM, central ministries
+- name: Vijaya Karnataka - India
+  url: https://www.vijaykarnataka.com/rss/india
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: National government news
+- name: Kannada Prabha - National
+  url: https://www.kannadaprabha.com/rss/national
+  region: Karnataka
+  language: kn
+  script: Kannada
+  description: Central government policies
+- name: Google News Tamil - Government
+  url: https://news.google.com/rss/search?q=அரசு+OR+திட்டம்+OR+மோடி+OR+மத்திய+when:1d&hl=ta&gl=IN&ceid=IN:ta
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: Government news pre-filtered by Google (25-35 articles/day)
+- name: Asianet Tamil - India
+  url: https://tamil.asianetnews.com/india/rss
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: National news and central government
+- name: Dinamalar - India
+  url: https://www.dinamalar.com/rss/india.xml
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: Central government news
+- name: Daily Thanthi - India
+  url: https://www.dailythanthi.com/rss/india
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: National politics coverage
+- name: Dinamani - India
+  url: https://www.dinamani.com/rss/india
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: Parliament and ministries
+- name: Hindu Tamil - India
+  url: https://www.hindutamil.in/rss/india
+  region: Tamil Nadu
+  language: ta
+  script: Tamil
+  description: Government schemes and policies
+- name: Google News Telugu - Government
+  url: https://news.google.com/rss/search?q=government+india+scheme+policy+when:1d&hl=te&gl=IN&ceid=IN:te
+  region: Telangana/AP
+  language: te
+  script: Telugu
+  description: Government schemes and policies - 35+ articles daily
+- name: Google News Telugu - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=te&gl=IN&ceid=IN:te
+  region: Telangana/AP
+  language: te
+  script: Telugu
+  description: PM Modi and central schemes
+- name: Asianet Telugu - India
+  url: https://telugu.asianetnews.com/india/rss
+  region: Telangana/AP
+  language: te
+  script: Telugu
+  description: National news and central government
+- name: Eenadu - National
+  url: https://www.eenadu.net/rss/national-news.xml
+  region: Andhra Pradesh
+  language: te
+  script: Telugu
+  description: Central government coverage
+- name: Sakshi - National
+  url: https://www.sakshi.com/rss/national
+  region: Telangana
+  language: te
+  script: Telugu
+  description: Parliament and policies
+- name: Andhra Jyothi - India
+  url: https://www.andhrajyothy.com/rss/india
+  region: Andhra Pradesh
+  language: te
+  script: Telugu
+  description: National schemes and ministries
+- name: Namasthe Telangana - National
+  url: https://www.namasthetelangana.com/rss/national
+  region: Telangana
+  language: te
+  script: Telugu
+  description: Central government updates
+- name: Google News Bengali - Government (Optimized)
+  url: https://news.google.com/rss/search?q=সরকার+OR+প্রকল্প+OR+মোদী+OR+কেন্দ্রীয়+when:1d&hl=bn&gl=IN&ceid=IN:bn
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: Government news pre-filtered by Google (25-35 articles/day)
+- name: Google News Bengali - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=bn&gl=IN&ceid=IN:bn
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: PM Modi and central schemes
+- name: Asianet Bengali - India
+  url: https://bengali.asianetnews.com/india/rss
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: National politics and central government
+- name: Anandabazar - India
+  url: https://www.anandabazar.com/rss/india
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: Central government news
+- name: Ei Samay - India
+  url: https://eisamay.indiatimes.com/rss/india
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: National schemes and policies
+- name: Sangbad Pratidin - National
+  url: https://www.sangbadpratidin.in/rss/national
+  region: West Bengal
+  language: bn
+  script: Bengali
+  description: Parliament and ministries
+- name: Google News Malayalam - Government (Optimized)
+  url: https://news.google.com/rss/search?q=സർക്കാർ+OR+പദ്ധതി+OR+മോദി+OR+കേന്ദ്ര+when:1d&hl=ml&gl=IN&ceid=IN:ml
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: Government news pre-filtered by Google (30-40 articles/day)
+- name: Google News Malayalam - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=ml&gl=IN&ceid=IN:ml
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: PM Modi and central schemes
+- name: Asianet Malayalam - India
+  url: https://newsable.asianetnews.com/india/rss
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: National news and central government
+- name: Manorama - India
+  url: https://www.manoramaonline.com/rss/india
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: Central government coverage
+- name: Mathrubhumi - India
+  url: https://www.mathrubhumi.com/rss/india
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: National policies and schemes
+- name: Madhyamam - India
+  url: https://www.madhyamam.com/rss/india
+  region: Kerala
+  language: ml
+  script: Malayalam
+  description: Parliament and ministries
+- name: Google News Marathi - Government (Optimized)
+  url: https://news.google.com/rss/search?q=सरकार+OR+योजना+OR+मोदी+OR+केंद्र+when:1d&hl=mr&gl=IN&ceid=IN:mr
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: Government news pre-filtered by Google (35-45 articles/day)
+- name: Google News Marathi - PM Modi
+  url: https://news.google.com/rss/search?q=मोदी+OR+पंतप्रधान+OR+केंद्र+योजना+when:1d&hl=mr&gl=IN&ceid=IN:mr
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: PM Modi and central schemes
+- name: Asianet Marathi - India
+  url: https://marathi.asianetnews.com/india/rss
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: National news and central government
+- name: Lokmat - National
+  url: https://www.lokmat.com/rss/national
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: Central government news
+- name: Loksatta - National
+  url: https://www.loksatta.com/rss/national-news
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: Parliament and policies
+- name: Maharashtra Times - India
+  url: https://maharashtratimes.com/rss/india
+  region: Maharashtra
+  language: mr
+  script: Devanagari
+  description: National schemes and ministries
+- name: Google News Gujarati - Government (Optimized)
+  url: https://news.google.com/rss/search?q=સરકાર+OR+યોજના+OR+મોદી+OR+કેન્દ્ર+when:1d&hl=gu&gl=IN&ceid=IN:gu
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: Government news pre-filtered by Google (30-40 articles/day)
+- name: Google News Gujarati - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=gu&gl=IN&ceid=IN:gu
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: PM Modi and central schemes
+- name: News18 Gujarati
+  url: https://gujarati.news18.com/rss/india.xml
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: National news and central government
+- name: Divya Bhaskar - National
+  url: https://www.divyabhaskar.co.in/rss/national.xml
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: Central government and national politics
+- name: Sandesh - National
+  url: https://www.sandesh.com/rss/national
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: Parliament and ministries coverage
+- name: Gujarat Samachar - National
+  url: https://www.gujaratsamachar.com/rss/national
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: National schemes and policies
+- name: Asianet Gujarati - India
+  url: https://gujarati.asianetnews.com/india/rss
+  region: Gujarat
+  language: gu
+  script: Gujarati
+  description: Central government updates
+- name: Google News Punjabi - Government
+  url: https://news.google.com/rss/search?q=ਸਰਕਾਰ+OR+ਯੋਜਨਾ+OR+ਕੇਂਦਰ+OR+ਮੋਦੀ+when:1d&hl=pa&gl=IN&ceid=IN:pa
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: Government schemes and policies - 9+ articles daily
+- name: Google News Punjabi - PM Modi
+  url: https://news.google.com/rss/search?q=ਮੋਦੀ+OR+ਪ੍ਰਧਾਨ+ਮੰਤਰੀ+OR+ਕੇਂਦਰੀ+ਯੋਜਨਾ+when:1d&hl=pa&gl=IN&ceid=IN:pa
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: PM Modi and central schemes
+- name: News18 Punjabi
+  url: https://punjabi.news18.com/rss/india.xml
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: National news and central government
+- name: Jag Bani - India
+  url: https://www.jagbani.com/rss/india
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: Central government news
+- name: Daily Ajit - India
+  url: https://www.ajitjalandhar.com/rss/india-news
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: National politics and schemes
+- name: Punjab Kesari Punjabi - National
+  url: https://www.punjabkesari.in/rss/punjabi/national
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: Parliament and ministries
+- name: Asianet Punjabi - India
+  url: https://punjabi.asianetnews.com/india/rss
+  region: Punjab
+  language: pa
+  script: Gurmukhi
+  description: Central government updates
+- name: Google News Odia - Government
+  url: https://news.google.com/rss/search?q=government+india+scheme+policy+when:1d&hl=or&gl=IN&ceid=IN:or
+  region: Odisha
+  language: or
+  script: Odia
+  description: Government schemes and policies
+- name: Google News Odia - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=or&gl=IN&ceid=IN:or
+  region: Odisha
+  language: or
+  script: Odia
+  description: PM Modi and central schemes
+- name: News18 Odia
+  url: https://odia.news18.com/rss/india.xml
+  region: Odisha
+  language: or
+  script: Odia
+  description: National news and central government
+- name: Dharitri - India
+  url: https://www.dharitri.com/rss/india
+  region: Odisha
+  language: or
+  script: Odia
+  description: Central government coverage
+- name: Samaja - National
+  url: https://samaja.in/rss/national
+  region: Odisha
+  language: or
+  script: Odia
+  description: Parliament and policies
+- name: Kanak News - National
+  url: https://kanaknews.com/rss/national
+  region: Odisha
+  language: or
+  script: Odia
+  description: National schemes and ministries
+- name: Asianet Odia - India
+  url: https://odia.asianetnews.com/india/rss
+  region: Odisha
+  language: or
+  script: Odia
+  description: Central government updates
+- name: Google News Urdu - Government
+  url: https://news.google.com/rss/search?q=government+india+scheme+policy+when:1d&hl=ur&gl=IN&ceid=IN:ur
+  region: India
+  language: ur
+  script: Arabic
+  description: Government schemes and policies
+- name: Google News Urdu - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=ur&gl=IN&ceid=IN:ur
+  region: India
+  language: ur
+  script: Arabic
+  description: PM Modi and central schemes
+- name: News18 Urdu
+  url: https://urdu.news18.com/rss/india.xml
+  region: India
+  language: ur
+  script: Arabic
+  description: National news and central government
+- name: Inquilab - National
+  url: https://www.inquilab.com/rss/national
+  region: India
+  language: ur
+  script: Arabic
+  description: Central government news
+- name: Siasat Daily - India
+  url: https://www.siasat.com/rss/india
+  region: Telangana
+  language: ur
+  script: Arabic
+  description: National politics coverage
+- name: Rashtriya Sahara - National
+  url: https://rashtriyasahara.samaylive.com/rss/national
+  region: India
+  language: ur
+  script: Arabic
+  description: Parliament and ministries
+- name: Etemaad - National
+  url: https://www.etemaaddaily.com/rss/national
+  region: India
+  language: ur
+  script: Arabic
+  description: Central government schemes
+- name: Google News Assamese - Government
+  url: https://news.google.com/rss/search?q=government+india+scheme+policy+when:1d&hl=as&gl=IN&ceid=IN:as
+  region: Assam
+  language: as
+  script: Bengali
+  description: Government schemes and policies
+- name: Google News Assamese - PM Modi
+  url: https://news.google.com/rss/search?q=modi+government+scheme+when:1d&hl=as&gl=IN&ceid=IN:as
+  region: Assam
+  language: as
+  script: Bengali
+  description: PM Modi and central schemes
+- name: News18 Assam
+  url: https://assam.news18.com/rss/india.xml
+  region: Assam
+  language: as
+  script: Bengali
+  description: National news and central government
+- name: Asomiya Pratidin - National
+  url: https://www.asomiyapratidin.in/rss/national
+  region: Assam
+  language: as
+  script: Bengali
+  description: Central government coverage
+- name: Prag News - National
+  url: https://www.pragnews.com/rss/national
+  region: Assam
+  language: as
+  script: Bengali
+  description: Parliament and policies
+- name: Niyomiya Barta - National
+  url: https://niyomiyabarta.com/rss/national
+  region: Assam
+  language: as
+  script: Bengali
+  description: National schemes and ministries
+- name: Asianet Assamese - India
+  url: https://assamese.asianetnews.com/india/rss
+  region: Assam
+  language: as
+  script: Bengali
+  description: Central government updates

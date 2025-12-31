@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/.venv/
+.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+
+# Build outputs
+dist/
+build/
+frontend/dist/
+frontend/build/
+
+# Environment variables
+.env
+.env.local
+.dev.vars
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Mocha/Wrangler (legacy)
+.wrangler/
+worker-configuration.d.ts
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+newsdb.sqlite
+
+# Models cache
+.cache/
+model_cache/
+vector_cache/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+__pycache__/
+
+# Node
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

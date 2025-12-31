@@ -1,0 +1,61 @@
+{
+  "name": "newsscope-india",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Real-time Government of India News Monitoring System with AI/ML - Multilingual news aggregation, sentiment analysis, and entity recognition for 12 Indian languages",
+  "dependencies": {
+    "@react-spring/web": "^10.0.3",
+    "@types/leaflet": "^1.9.20",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.510.0",
+    "prop-types": "^15.8.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-intersection-observer": "^10.0.0",
+    "react-is": "^19.1.1",
+    "react-leaflet": "^5.0.0",
+    "react-router": "^7.5.3",
+    "react-router-dom": "^7.5.3",
+    "react-simple-maps": "^3.0.0",
+    "recharts": "^3.2.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "22.14.1",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "9.25.1",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.19",
+    "globals": "15.15.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.31.0",
+    "vite": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "government",
+    "news",
+    "monitoring",
+    "ai",
+    "ml",
+    "multilingual",
+    "india",
+    "sentiment-analysis",
+    "nlp"
+  ],
+  "author": "",
+  "license": "MIT"
+}

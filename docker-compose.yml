@@ -1,0 +1,83 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: newsdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Optional MongoDB (set DB_PROVIDER=mongodb in backend to use)
+  # mongo:
+  #   image: mongo:7-jammy
+  #   environment:
+  #     MONGO_INITDB_DATABASE: newsdb
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo_data:/data/db
+  #   healthcheck:
+  #     test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      APP_NAME: "360-Degree Feedback Backend"
+      ENV: "production"
+      LOG_LEVEL: "INFO"
+      DB_PROVIDER: "postgres"
+      DATABASE_URL: "postgresql+psycopg2://postgres:postgres@db:5432/newsdb"
+      # For MongoDB, use:
+      # DB_PROVIDER: "mongodb"
+      # MONGODB_URI: "mongodb://mongo:27017"
+      NLP_ENABLED: "false"
+      USE_GPU: "false"
+      SENTIMENT_MODEL: "cardiffnlp/twitter-xlm-roberta-base-sentiment"
+      ZERO_SHOT_MODEL: "joeddav/xlm-roberta-large-xnli"
+      NER_MODEL: "xlm-roberta-large-finetuned-conll03-english"
+      COLLECT_INTERVAL_MIN: "15"
+      CORS_ORIGINS: '["http://localhost:5173","http://localhost:3000"]'
+    depends_on:
+      db:
+        condition: service_healthy
+      # If using MongoDB:
+      # mongo:
+      #   condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app/feeds.yaml:/app/app/feeds.yaml:ro
+      - model_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      VITE_API_URL: "http://localhost:8000"
+    ports:
+      - "5174:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  db_data:
+  mongo_data:
+  model_cache:

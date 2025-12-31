@@ -1,0 +1,566 @@
+# WEB SCRAPING SOURCES FOR MULTILINGUAL GOI NEWS
+# Regional Indian news sources without RSS feeds
+# Configured for BeautifulSoup/Newspaper3k scraping
+
+sources:
+  # ========================================
+  # HINDI (हिन्दी) WEB SOURCES
+  # ========================================
+  - name: "Dainik Bhaskar"
+    url: "https://www.bhaskar.com/national/"
+    language: hi
+    script: Devanagari
+    region: National
+    prefer_newspaper: true
+    description: "National news coverage in Hindi"
+    
+  - name: "Amar Ujala"
+    url: "https://www.amarujala.com/india-news"
+    language: hi
+    script: Devanagari
+    region: National
+    prefer_newspaper: true
+    description: "India news in Hindi"
+    
+  - name: "Dainik Jagran"
+    url: "https://www.jagran.com/news/national-hindi-news.html"
+    language: hi
+    script: Devanagari
+    region: National
+    prefer_newspaper: true
+    description: "National news - largest Hindi daily"
+    
+  - name: "Navbharat Times"
+    url: "https://navbharattimes.indiatimes.com/india"
+    language: hi
+    script: Devanagari
+    region: National
+    prefer_newspaper: true
+    description: "Times Group Hindi newspaper"
+    
+  - name: "Live Hindustan"
+    url: "https://www.livehindustan.com/national/"
+    language: hi
+    script: Devanagari
+    region: National
+    prefer_newspaper: true
+    description: "National news in Hindi - web scraping"
+  
+  # ========================================
+  # KANNADA (ಕನ್ನಡ) WEB SOURCES
+  # ========================================
+  - name: "Prajavani"
+    url: "https://www.prajavani.net/india"
+    language: kn
+    script: Kannada
+    region: Karnataka
+    prefer_newspaper: true
+    description: "Leading Kannada newspaper - national news"
+    
+  - name: "Vijaya Karnataka"
+    url: "https://www.vijaykarnataka.com/india"
+    language: kn
+    script: Kannada
+    region: Karnataka
+    prefer_newspaper: true
+    description: "Times Group Kannada newspaper"
+    
+  - name: "Kannada Prabha"
+    url: "https://www.kannadaprabha.com/national"
+    language: kn
+    script: Kannada
+    region: Karnataka
+    prefer_newspaper: true
+    description: "National news in Kannada"
+    
+  - name: "Udayavani"
+    url: "https://www.udayavani.com/india-news"
+    language: kn
+    script: Kannada
+    region: Karnataka
+    prefer_newspaper: true
+    description: "India news coverage"
+    
+  - name: "Samyukta Karnataka"
+    url: "https://www.samyuktakarnataka.com/national"
+    language: kn
+    script: Kannada
+    region: Karnataka
+    prefer_newspaper: true
+    description: "Karnataka-based national coverage"
+  
+  # ========================================
+  # TAMIL (தமிழ்) WEB SOURCES
+  # ========================================
+  - name: "Dinamalar"
+    url: "https://www.dinamalar.com/News_List.asp?Cat=1"
+    language: ta
+    script: Tamil
+    region: Tamil Nadu
+    prefer_newspaper: true
+    description: "Leading Tamil daily - India news"
+    
+  - name: "Daily Thanthi"
+    url: "https://www.dailythanthi.com/News/India"
+    language: ta
+    script: Tamil
+    region: Tamil Nadu
+    prefer_newspaper: true
+    description: "Popular Tamil newspaper"
+    
+  - name: "Dinamani"
+    url: "https://www.dinamani.com/india/"
+    language: ta
+    script: Tamil
+    region: Tamil Nadu
+    prefer_newspaper: true
+    description: "Times Group Tamil newspaper"
+    
+  - name: "Maalai Malar"
+    url: "https://www.maalaimalar.com/news/india"
+    language: ta
+    script: Tamil
+    region: Tamil Nadu
+    prefer_newspaper: true
+    description: "Evening Tamil daily"
+    
+  - name: "The Hindu Tamil"
+    url: "https://www.hindutamil.in/news/india"
+    language: ta
+    script: Tamil
+    region: Tamil Nadu
+    prefer_newspaper: true
+    description: "The Hindu's Tamil edition"
+  
+  # ========================================
+  # TELUGU (తెలుగు) WEB SOURCES
+  # ========================================
+  - name: "Eenadu"
+    url: "https://www.eenadu.net/telugu-national-news-section.aspx"
+    language: te
+    script: Telugu
+    region: Andhra Pradesh/Telangana
+    prefer_newspaper: true
+    description: "Largest Telugu newspaper"
+    
+  - name: "Sakshi"
+    url: "https://www.sakshi.com/news/national"
+    language: te
+    script: Telugu
+    region: Andhra Pradesh/Telangana
+    prefer_newspaper: true
+    description: "Leading Telugu daily"
+    
+  - name: "Andhra Jyothi"
+    url: "https://www.andhrajyothy.com/india"
+    language: te
+    script: Telugu
+    region: Andhra Pradesh
+    prefer_newspaper: true
+    description: "Popular Telugu newspaper"
+    
+  - name: "Namasthe Telangana"
+    url: "https://www.namasthetelangana.com/national"
+    language: te
+    script: Telugu
+    region: Telangana
+    prefer_newspaper: true
+    description: "Telangana-based national coverage"
+    
+  - name: "Vaartha"
+    url: "https://www.vaartha.com/en/india/"
+    language: te
+    script: Telugu
+    region: Andhra Pradesh/Telangana
+    prefer_newspaper: true
+    description: "National news in Telugu"
+  
+  # ========================================
+  # BENGALI (বাংলা) WEB SOURCES
+  # ========================================
+  - name: "Anandabazar Patrika"
+    url: "https://www.anandabazar.com/india"
+    language: bn
+    script: Bengali
+    region: West Bengal
+    prefer_newspaper: true
+    description: "Leading Bengali newspaper"
+    
+  - name: "Bartaman Patrika"
+    url: "https://bartamanpatrika.com/national.php"
+    language: bn
+    script: Bengali
+    region: West Bengal
+    prefer_newspaper: true
+    description: "Popular Bengali daily"
+    
+  - name: "Sangbad Pratidin"
+    url: "https://www.sangbadpratidin.in/national/"
+    language: bn
+    script: Bengali
+    region: West Bengal
+    prefer_newspaper: true
+    description: "National news in Bengali"
+    
+  - name: "Aajkaal"
+    url: "https://aajkaal.in/india"
+    language: bn
+    script: Bengali
+    region: West Bengal
+    prefer_newspaper: true
+    description: "Bengali daily newspaper"
+    
+  - name: "Ei Samay"
+    url: "https://eisamay.indiatimes.com/india"
+    language: bn
+    script: Bengali
+    region: West Bengal
+    prefer_newspaper: true
+    description: "Times Group Bengali newspaper"
+  
+  # ========================================
+  # MALAYALAM (മലയാളം) WEB SOURCES
+  # ========================================
+  - name: "Malayala Manorama"
+    url: "https://www.manoramaonline.com/news/india.html"
+    language: ml
+    script: Malayalam
+    region: Kerala
+    prefer_newspaper: true
+    description: "Largest Malayalam newspaper"
+    
+  - name: "Mathrubhumi"
+    url: "https://www.mathrubhumi.com/news/india"
+    language: ml
+    script: Malayalam
+    region: Kerala
+    prefer_newspaper: true
+    description: "Leading Malayalam daily"
+    
+  - name: "Deshabhimani"
+    url: "https://www.deshabhimani.com/india"
+    language: ml
+    script: Malayalam
+    region: Kerala
+    prefer_newspaper: true
+    description: "Popular Malayalam newspaper"
+    
+  - name: "Madhyamam"
+    url: "https://www.madhyamam.com/india"
+    language: ml
+    script: Malayalam
+    region: Kerala
+    prefer_newspaper: true
+    description: "Malayalam daily newspaper"
+    
+  - name: "Janmabhumi"
+    url: "https://www.janmabhumi.in/india"
+    language: ml
+    script: Malayalam
+    region: Kerala
+    prefer_newspaper: true
+    description: "Kerala-based national coverage"
+  
+  # ========================================
+  # GUJARATI (ગુજરાતી) WEB SOURCES
+  # ========================================
+  - name: "Gujarat Samachar"
+    url: "https://www.gujaratsamachar.com/national"
+    language: gu
+    script: Gujarati
+    region: Gujarat
+    prefer_newspaper: true
+    description: "Leading Gujarati newspaper"
+    
+  - name: "Sandesh"
+    url: "https://www.sandesh.com/national"
+    language: gu
+    script: Gujarati
+    region: Gujarat
+    prefer_newspaper: true
+    description: "Popular Gujarati daily"
+    
+  - name: "Divya Bhaskar"
+    url: "https://www.divyabhaskar.co.in/national/"
+    language: gu
+    script: Gujarati
+    region: Gujarat
+    prefer_newspaper: true
+    description: "Dainik Bhaskar Gujarati edition"
+    
+  - name: "Sandesh Epaper"
+    url: "https://epaper.sandesh.com/category/national"
+    language: gu
+    script: Gujarati
+    region: Gujarat
+    prefer_newspaper: true
+    description: "Sandesh digital national news"
+    
+  - name: "Gujarati One India"
+    url: "https://gujarati.oneindia.com/india/"
+    language: gu
+    script: Gujarati
+    region: Gujarat
+    prefer_newspaper: true
+    description: "Gujarat and India news"
+  
+  # ========================================
+  # MARATHI (मराठी) WEB SOURCES
+  # ========================================
+  - name: "Lokmat"
+    url: "https://www.lokmat.com/national/"
+    language: mr
+    script: Devanagari
+    region: Maharashtra
+    prefer_newspaper: true
+    description: "Largest Marathi newspaper"
+    
+  - name: "Sakal"
+    url: "https://www.esakal.com/india"
+    language: mr
+    script: Devanagari
+    region: Maharashtra
+    prefer_newspaper: true
+    description: "Leading Marathi daily"
+    
+  - name: "Loksatta"
+    url: "https://www.loksatta.com/national-news/"
+    language: mr
+    script: Devanagari
+    region: Maharashtra
+    prefer_newspaper: true
+    description: "Popular Marathi newspaper"
+    
+  - name: "Pudhari"
+    url: "https://www.pudhari.news/national/"
+    language: mr
+    script: Devanagari
+    region: Maharashtra
+    prefer_newspaper: true
+    description: "Maharashtra-based national news"
+    
+  - name: "Maharashtra Times"
+    url: "https://maharashtratimes.com/india"
+    language: mr
+    script: Devanagari
+    region: Maharashtra
+    prefer_newspaper: true
+    description: "Times Group Marathi newspaper"
+  
+  # ========================================
+  # ODIA (ଓଡ଼ିଆ) WEB SOURCES
+  # ========================================
+  - name: "Sambad"
+    url: "https://sambad.in/state/"
+    language: or
+    script: Odia
+    region: Odisha
+    prefer_newspaper: true
+    description: "Leading Odia newspaper - state and national news"
+    
+  - name: "Dharitri"
+    url: "https://www.dharitri.com/india/"
+    language: or
+    script: Odia
+    region: Odisha
+    prefer_newspaper: true
+    description: "Popular Odia daily newspaper"
+    
+  - name: "Samaja"
+    url: "https://samaja.in/national/"
+    language: or
+    script: Odia
+    region: Odisha
+    prefer_newspaper: true
+    description: "Historic Odia newspaper - national coverage"
+    
+  - name: "Odisha TV"
+    url: "https://odishatv.in/odisha"
+    language: or
+    script: Odia
+    region: Odisha
+    prefer_newspaper: true
+    description: "Regional and national news coverage"
+    
+  - name: "Kanak News"
+    url: "https://kanaknews.com/national/"
+    language: or
+    script: Odia
+    region: Odisha
+    prefer_newspaper: true
+    description: "Odisha-based national news"
+  
+  # ========================================
+  # PUNJABI (ਪੰਜਾਬੀ) WEB SOURCES
+  # ========================================
+  - name: "Jag Bani"
+    url: "https://www.jagbani.com/india"
+    language: pa
+    script: Gurmukhi
+    region: Punjab
+    prefer_newspaper: true
+    description: "Leading Punjabi newspaper"
+    
+  - name: "Daily Ajit"
+    url: "https://www.ajitjalandhar.com/india-news"
+    language: pa
+    script: Gurmukhi
+    region: Punjab
+    prefer_newspaper: true
+    description: "Popular Punjabi daily"
+    
+  - name: "Rozana Spokesman"
+    url: "https://www.spokesmanpunjab.com/national/"
+    language: pa
+    script: Gurmukhi
+    region: Punjab
+    prefer_newspaper: true
+    description: "National news in Punjabi"
+    
+  - name: "Punjab Kesari Punjabi"
+    url: "https://www.punjabkesari.in/punjabi/national"
+    language: pa
+    script: Gurmukhi
+    region: Punjab
+    prefer_newspaper: true
+    description: "Punjab Kesari Punjabi edition"
+    
+  - name: "Nawan Zamana"
+    url: "https://www.nawanzamana.com/national"
+    language: pa
+    script: Gurmukhi
+    region: Punjab
+    prefer_newspaper: true
+    description: "Punjab-based national news coverage"
+  
+  # ========================================
+  # URDU (اردو) WEB SOURCES
+  # ========================================
+  - name: "Inquilab"
+    url: "https://www.inquilab.com/category/national/"
+    language: ur
+    script: Arabic
+    region: National
+    prefer_newspaper: true
+    description: "Leading Urdu newspaper"
+    
+  - name: "Siasat Daily"
+    url: "https://www.siasat.com/category/india/"
+    language: ur
+    script: Arabic
+    region: Telangana
+    prefer_newspaper: true
+    description: "Popular Urdu daily"
+    
+  - name: "Roznama Rashtriya Sahara"
+    url: "https://rashtriyasahara.samaylive.com/national"
+    language: ur
+    script: Arabic
+    region: National
+    prefer_newspaper: true
+    description: "National Urdu newspaper"
+    
+  - name: "Munsif Daily"
+    url: "https://munsifdaily.com/national/"
+    language: ur
+    script: Arabic
+    region: Telangana
+    prefer_newspaper: true
+    description: "Hyderabad-based Urdu daily"
+    
+  - name: "Etemaad Urdu Daily"
+    url: "https://www.etemaaddaily.com/national"
+    language: ur
+    script: Arabic
+    region: National
+    prefer_newspaper: true
+    description: "National news in Urdu"
+  
+  # ========================================
+  # ASSAMESE (অসমীয়া) WEB SOURCES
+  # ========================================
+  - name: "Asomiya Pratidin"
+    url: "https://www.asomiyapratidin.in/national/"
+    language: as
+    script: Bengali
+    region: Assam
+    prefer_newspaper: true
+    description: "Leading Assamese newspaper"
+    
+  - name: "Prag News"
+    url: "https://www.pragnews.com/category/national/"
+    language: as
+    script: Bengali
+    region: Assam
+    prefer_newspaper: true
+    description: "National news in Assamese"
+    
+  - name: "Dainik Agradoot"
+    url: "https://dainikagradoot.com/category/national/"
+    language: as
+    script: Bengali
+    region: Assam
+    prefer_newspaper: true
+    description: "Popular Assamese daily"
+    
+  - name: "Niyomiya Barta"
+    url: "https://niyomiyabarta.com/national/"
+    language: as
+    script: Bengali
+    region: Assam
+    prefer_newspaper: true
+    description: "Assam-based national coverage"
+  
+  # ========================================
+  # ENGLISH (NATIONAL) WEB SOURCES
+  # ========================================
+  - name: "The Hindu"
+    url: "https://www.thehindu.com/news/national/"
+    language: en
+    script: Latin
+    region: National
+    prefer_newspaper: true
+    description: "Leading English newspaper"
+    
+  - name: "The Indian Express"
+    url: "https://indianexpress.com/section/india/"
+    language: en
+    script: Latin
+    region: National
+    prefer_newspaper: true
+    description: "National news coverage"
+    
+  - name: "Times of India"
+    url: "https://timesofindia.indiatimes.com/india"
+    language: en
+    script: Latin
+    region: National
+    prefer_newspaper: true
+    description: "Largest English newspaper"
+    
+  - name: "Hindustan Times"
+    url: "https://www.hindustantimes.com/india-news"
+    language: en
+    script: Latin
+    region: National
+    prefer_newspaper: true
+    description: "National English daily"
+    
+  - name: "Deccan Herald"
+    url: "https://www.deccanherald.com/india"
+    language: en
+    script: Latin
+    region: National
+    prefer_newspaper: true
+    description: "South India-based national coverage"
+
+# Notes:
+# - These sources don't have RSS feeds and require web scraping
+# - Newspaper3k is preferred for cleaner extraction
+# - BeautifulSoup fallback for difficult sites
+# - Custom selectors can be added per source if needed
+# - All entries include: name, url, language, script, region, prefer_newspaper, description
+# - Each language section has 4-5 quality sources for comprehensive coverage
+
+if not art.get("is_goi"):
+    continue  # Skips non-GoI articles
