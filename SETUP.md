@@ -57,7 +57,12 @@ DB_PROVIDER=sqlite
 DATABASE_URL=sqlite:///./newsdb.sqlite
 LOG_LEVEL=info
 COLLECT_INTERVAL_MIN=60
+
+# Required for IndicTrans2 translation model
+HUGGINGFACE_TOKEN=your_huggingface_token_here
 ```
+
+**Note:** Get your Hugging Face token from https://huggingface.co/settings/tokens
 
 ### Frontend
 Frontend automatically connects to backend at http://localhost:8000/api
